@@ -42,7 +42,7 @@ func main() {
 
 	picks := make(map[string][]string)
 
-	for i := 0; i < len(teams); i++ {
+	for i := 0; i < (len(teams) - len(teams)%len(people)); i++ {
 		if len(slicedPeople) == 0 {
 			slicedPeople = make([]string, len(people))
 			copy(slicedPeople, people)
